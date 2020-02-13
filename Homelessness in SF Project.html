@@ -1,0 +1,107 @@
+<html>
+
+<head>
+  <title>Homelesssness in San Francisco</title>
+  <h1>Homelessness in San Francisco</h1>
+  <p>
+    This map seeks to provide resources related to homelessness in San Francisco, including heatmaps, proximity to shelters, and more. </p>
+  </p>
+  <style>
+  h1 {
+      font-family: Helvetica;
+      color: #659dbd;
+      text-align: center
+    }
+  p {
+      font-family: Helvetica;
+      color: rgb(151, 148, 148);
+      text-align: center
+    }
+  h3 {
+      font-family: Helvetica;
+      color: #659dbd;
+      text-align: center
+    }
+    h4 {
+      font-family: Helvetica;
+      color: #659dbd;
+      text-align: center
+    }
+  
+  a {
+  text-decoration: none;
+  color: #2dc4b2;
+    }
+  #console {
+      position: absolute;
+      width: 240px;
+      height: 90px;
+      margin: 10px;
+      padding: 10px 20px;
+      background-color: rgba(218, 216, 216, 0.849);
+}
+  </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
+  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.css' rel='stylesheet' />
+  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.js'></script>
+
+  <style type="text/css">
+    #mapId {
+      width: 100%;
+      height: 700px;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div id="mapId"></div>
+
+  <h3>Homelessness is on the rise in San Francisco.</h3>
+  <p>In 2019, 8,011 homeless individuals were counted in San Francisco.</p>
+  <p>This is a 14% increase from 2017.</p>
+
+<!--https://sfgov.org/scorecards/safety-net/homeless-population -->
+
+  <div id="console">
+    <h4>Timeline from XXX to XXX</h4>
+  </div>
+
+  <script>
+
+    mapboxgl.accessToken = "pk.eyJ1IjoibXR0aHdmZXJuIiwiYSI6ImNrNXJvZTRuMTBmZTAzZW02YjR3NTVnYjYifQ.xEJlYs1rWMfnfgIHQzR3Tw";
+
+    var map = new mapboxgl.Map({
+      center: [-122.4312, 37.7739],
+      zoom: 11.5,
+      style: "mapbox://styles/mtthwfern/ck6iu8tur0pb31ip46vlib5b0",
+      container: "mapId"
+    });
+
+    var phcpop = new mapboxgl.Popup({ offset: [0, -15] })
+      .setLngLat([-122.423140, 37.783950])
+      .setHTML("<b>Project Homelessness Connect</b><br /> The mission of Project Homeless Connect is to connect San Franciscans experiencing homelessness with the care they need to move forward. <br /> <a href='https://www.projecthomelessconnect.org/'>Website</a>")
+      .addTo(map);
+
+      var phcmark = new mapboxgl.Marker()
+      .setLngLat([-122.423140, 37.783950])
+      .setPopup(phcpop)
+      .addTo(map);
+
+    var sfmfoodpop = new mapboxgl.Popup({ offset: [0, -15] })
+      .setLngLat([-122.393806, 37.754505])
+      .setHTML("<b>SF Marin Food Bank</b><br /> We envision a community where everyone is able to obtain enough nutritious food — in a dignified manner — to support the health and well-being of themselves and their families. <br /> <a href='https://www.sfmfoodbank.org/'>Website</a>")
+      .addTo(map);
+
+      var sfmfoodmark = new mapboxgl.Marker({color: "green"})
+      .setLngLat([-122.393806, 37.754505])
+      .setPopup(sfmfoodpop)
+      .addTo(map);
+
+  </script>
+</body>
+
+</html>

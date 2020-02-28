@@ -1,0 +1,77 @@
+{
+   "type": "FeatureCollection",
+   "features": [
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.48981,37.7752 ]
+    },
+    "properties": {
+    "Name":"The Richmond Neighborhood Center",
+    "Service-type":"Food",
+    "FIELD5":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.43558,37.79128 ]
+    },
+    "properties": {
+    "Name":"Food Runners",
+    "Service-type":"Food",
+    "FIELD5":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.41937,37.7837 ]
+    },
+    "properties": {
+    "Name":"Project Open Hand",
+    "Service-type":"Food",
+    "FIELD5":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.41155,37.7834 ]
+    },
+    "properties": {
+    "Name":"San Francisco City Impact Rescue Mission",
+    "Service-type":"Food",
+    "FIELD5":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.393806,37.754505 ]
+    },
+    "properties": {
+    "Name":"San Francisco-Marin Food Bank",
+    "Service-type":"Food",
+    "FIELD5":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.417808,37.748838 ]
+    },
+    "properties": {
+    "Name":"Leah's Pantry",
+    "Service-type":"Food",
+    "FIELD5":""
+    }
+  }
+]
+}

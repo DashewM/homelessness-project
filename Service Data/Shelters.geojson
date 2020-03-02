@@ -1,0 +1,170 @@
+{
+   "type": "FeatureCollection",
+   "features": [
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.417664,37.7878 ]
+    },
+    "properties": {
+    "Name":"Raphael House",
+    "Service-type":"Shelter"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.41959,37.78543 ]
+    },
+    "properties": {
+    "Name":"Next Door Shelter",
+    "Service-type":"Shelter"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.423141,37.783951 ]
+    },
+    "properties": {
+    "Name":"Project Homeless Connect",
+    "Service-type":"Shelter"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.415001,37.781982 ]
+    },
+    "properties": {
+    "Name":"Hamilton Familities Shelter Program",
+    "Service-type":"Shelter"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.415908,37.778583 ]
+    },
+    "properties": {
+    "Name":"Compass Family Services",
+    "Service-type":"Shelter"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.410187,37.783404 ]
+    },
+    "properties": {
+    "Name":"Aranda Residence",
+    "Service-type":"Shelter"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.407772,37.780057 ]
+    },
+    "properties": {
+    "Name":"CityTeam San Francisco",
+    "Service-type":"Shelter"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.407885,37.7789 ]
+    },
+    "properties": {
+    "Name":"Ark of Refuge Inc",
+    "Service-type":"Shelter"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.399983,37.777819 ]
+    },
+    "properties": {
+    "Name":"St. Vincent de Paul MSC Shelter",
+    "Service-type":"Shelter"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.411216,37.776286 ]
+    },
+    "properties": {
+    "Name":"The Sanctuary",
+    "Service-type":"Shelter"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.419986,37.773996 ]
+    },
+    "properties": {
+    "Name":"Civic Center Navigation Center",
+    "Service-type":"Shelter"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.417075,37.762991 ]
+    },
+    "properties": {
+    "Name":"Golden Gate Senior Services",
+    "Service-type":"Shelter"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.418307,37.764056 ]
+    },
+    "properties": {
+    "Name":"Mission Neighborhood Resource Center",
+    "Service-type":"Shelter"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.421487,37.757827 ]
+    },
+    "properties": {
+    "Name":"Dolores Street Community Services",
+    "Service-type":"Shelter"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.388633,37.72681 ]
+    },
+    "properties": {
+    "Name":"United Council of Human Services",
+    "Service-type":"Shelter"
+    }
+  }
+]
+}

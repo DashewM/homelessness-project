@@ -1,0 +1,82 @@
+{
+   "type": "FeatureCollection",
+   "features": [
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.41301,37.78219 ]
+    },
+    "properties": {
+    "Name":"Larkin Street Youth Services",
+    "Service-type":"Youth"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.419838,37.78392 ]
+    },
+    "properties": {
+    "Name":"Lark - Inn for Youth",
+    "Service-type":"Youth"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.45421,37.7816 ]
+    },
+    "properties": {
+    "Name":"Huckleberry Youth Programs",
+    "Service-type":"Youth"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.504201,37.760687 ]
+    },
+    "properties": {
+    "Name":"Sunset Youth Services",
+    "Service-type":"Youth"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.432503,37.782794 ]
+    },
+    "properties": {
+    "Name":"Urban Services YMCA",
+    "Service-type":"Youth"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.419097,37.787133 ]
+    },
+    "properties": {
+    "Name":"Community Youth Services",
+    "Service-type":"Youth"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.416789,37.763487 ]
+    },
+    "properties": {
+    "Name":"Seven Tepees Youth Program",
+    "Service-type":"Youth"
+    }
+  }
+]
+}

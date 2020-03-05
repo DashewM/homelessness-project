@@ -1,0 +1,312 @@
+<html>
+<head>
+  <title>Homelesssness in San Francisco</title>
+  <style>
+    h1 {
+        font-family: Helvetica;
+        color: #659dbd;
+        text-align: center
+        }
+    p {
+        font-family: Helvetica;
+        color: rgb(151, 148, 148);
+        text-align: center
+        }
+    h3 {
+        font-family: Helvetica;
+        color: #659dbd;
+        text-align: center
+        }
+        h4 {
+        font-family: Helvetica;
+        color: #659dbd;
+        text-align: center
+        }
+    
+    a {
+        text-decoration: none;
+        color: #2dc4b2;
+        }
+    #console {
+        position: absolute;
+        width: 300px;
+        height: 150px;
+        margin: 10px;
+        padding: 10px 20px;
+        background-color: rgba(218, 216, 216, 0.849);
+    }
+
+    #mapId {
+        width: 100%;
+        height: 700px;
+    }
+
+    .map-overlay {
+        font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+        position: absolute;
+        width: 25%;
+        top: 0;
+        left: 0;
+        padding: 10px;
+    }
+    
+    .map-overlay .map-overlay-inner {
+        background-color: #fff;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+        border-radius: 3px;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+    
+    .map-overlay h2 {
+        line-height: 24px;
+        display: block;
+        margin: 0 0 10px;
+    }
+    
+    .map-overlay .legend .bar {
+        height: 10px;
+        width: 100%;
+        background: linear-gradient(to right, #fca107, #7f3121);
+    }
+    
+    .map-overlay input {
+        background-color: transparent;
+        display: inline-block;
+        width: 100%;
+        position: relative;
+        margin: 0;
+        cursor: ew-resize;
+    }
+  </style>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
+  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.css' rel='stylesheet' />
+  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.js'></script>
+</head>
+
+<body>
+  <h1>Homelessness in San Francisco</h1>
+  <p>
+    This map seeks to provide resources related to homelessness in San Francisco, including heatmaps, proximity to shelters, and more. </p>
+  </p>
+
+  <div id="mapId"></div>
+
+  <div class="map-overlay top">
+    <div class="map-overlay-inner">
+      <h2>Number of Homeless Encampents in 2019</h2>
+      <label id="month"></label>
+      <input id="slider" type="range" min="0" max="11" step="1" value="0" />
+    </div>
+  </div>
+
+  <h3>Homelessness is on the rise in San Francisco.</h3>
+  <p>In 2019, 8,011 homeless individuals were counted in San Francisco.</p>
+  <p>This is a 14% increase from 2017.</p>
+
+  <!--https://sfgov.org/scorecards/safety-net/homeless-population -->
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script>
+    mapboxgl.accessToken = "pk.eyJ1IjoiZGFzaGV3IiwiYSI6ImNrNWZ1bjI3djAxNzIzbG9jMXcwNmdiMGoifQ.1VrgWnYzP6H9Ep5EyVMsmA";
+    var map = new mapboxgl.Map({
+      center: [-122.4312, 37.7739],
+      zoom: 11.5,
+      style: "mapbox://styles/dashew/ck6wl2x5900re1iny9at72r62",
+      container: "mapId"
+    });
+
+    var months = [
+      'January',
+      'February',
+      'March',
+      'April',
+      'May',
+      'June',
+      'July',
+      'August',
+      'September',
+      'October',
+      'November',
+      'December'
+    ];
+
+    // const jan = ['==', ['get', month], 1]
+
+    function filterBy(month) {
+      console.log(month);
+      let base_filters = ['==', 'month', month];
+      let cluster_filters = ['all', ['>', ['get', month.toString()], 1], ['==', ['get', 'cluster'], true]];
+      console.log(cluster_filters);
+      // let unclustered_point_filters = base_filters.concat(['!', ['has', 'point_count']])
+      map.setFilter('clusters', cluster_filters);
+      map.setPaintProperty('clusters', 'circle-radius', ['step', ['get', month.toString()], 20, 100, 30, 750, 40])
+      map.setPaintProperty('clusters', 'circle-color', ['step', ['get', month.toString()], '#738dd1', 100, '#3f558f', 750, '#253663'])
+
+      map.setFilter('cluster-count', cluster_filters);
+      // map.setPaintProperty('clusters', 'circle-radius', ['step', ['get', month.toString()], 20, 100, 30, 750, 40])
+      // map.setPaintProperty('clusters', 'circle-color', ['step', ['get', month.toString()], '#738dd1', 100, '#3f558f', 750, '#253663'])
+      map.setLayoutProperty('cluster-count', 'text-field', ['get', month.toString()]);
+
+      // map.setFilter('unclustered-point', unclustered_point_filters);
+      
+      // Set the label to the month
+      document.getElementById('month').textContent = months[month];
+    }
+
+    function add_month_property(data) {
+      data.features = data.features.map(function(d) {
+        d.properties.month = new Date(d.properties.Opened).getMonth();
+        return d;
+      })
+      // console.log(data);
+      return data;
+    }
+
+
+    function draw_homeless_data(data) {
+      // console.log(data);
+      map.addSource('homeless', {
+        type: 'geojson',
+        data: data,
+        cluster: true,
+        clusterMaxZoom: 14,
+        clusterRadius: 70,
+        clusterProperties: { // keep separate counts for each month category in a cluster
+          0: ['+', ['case', ['==', ['get', 'month'], 0], 1, 0]],
+          1: ['+', ['case', ['==', ['get', 'month'], 1], 1, 0]],
+          2 : ['+', ['case', ['==', ['get', 'month'], 2], 1, 0]],
+          3: ['+', ['case', ['==', ['get', 'month'], 3], 1, 0]],
+          4: ['+', ['case', ['==', ['get', 'month'], 4], 1, 0]],
+          5: ['+', ['case', ['==', ['get', 'month'], 5], 1, 0]],
+          6: ['+', ['case', ['==', ['get', 'month'], 6], 1, 0]],
+          7: ['+', ['case', ['==', ['get', 'month'], 7], 1, 0]],
+          8: ['+', ['case', ['==', ['get', 'month'], 8], 1, 0]],
+          9: ['+', ['case', ['==', ['get', 'month'], 9], 1, 0]],
+          10: ['+', ['case', ['==', ['get', 'month'], 10], 1, 0]],
+          11: ['+', ['case', ['==', ['get', 'month'], 11], 1, 0]],
+        }
+      });
+      console.log(data);
+
+      map.addLayer({
+        id:'clusters',
+        type: 'circle',
+        source: 'homeless',
+        paint: {},
+        
+      });
+
+      map.addLayer({
+        id: 'cluster-count',
+        type: 'symbol',
+        source: 'homeless',
+        layout: {
+          'text-field': '{point_count_abbreviated}',
+          'text-font': ['DIN Offc Pro Medium', 'Arial Unicode MS Bold'],
+          'text-size': 12
+        }
+      });
+
+      map.addLayer({
+        id: 'unclustered-point',
+        type: 'circle',
+        source: 'homeless',
+        filter: ['!', ['has', 'point_count']],
+        paint: {
+        'circle-color': '#9bb3f2',
+        'circle-radius': 4,
+        'circle-stroke-width': 1,
+        'circle-stroke-color': '#fff'
+        }
+      });
+
+      // Set filter to first month of the year
+      // 0 = January
+      filterBy(0);
+      document
+        .getElementById('slider')
+        .addEventListener('input', function(e) {
+          var month = parseInt(e.target.value, 10);
+          filterBy(month);
+        });
+    };
+    
+    
+    map.on('load', function(){
+      map.addSource('youth', {
+        'type': 'geojson',
+        'data': 'https://raw.githubusercontent.com/DashewM/homelessness-project/master/Service%20Data/Youth.geojson'
+      });
+
+      map.addLayer({
+        'id': 'youth',
+        'type': 'symbol',
+        'source': 'youth',
+        'layout': {
+          'icon-image': 'playground-15',
+          'text-anchor': 'top'
+        }
+      });
+
+      map.addSource('food', {
+          'type': 'geojson',
+          'data': 'https://raw.githubusercontent.com/DashewM/homelessness-project/master/Service%20Data/FoodServices.geojson'
+      });
+
+      map.addLayer({
+          'id': 'food',
+          'type': 'symbol',
+          'source': 'food',
+          'layout': {
+              'icon-image': 'restaurant-15',
+              // get the title name from the source's "title" property
+              'text-anchor': 'top'
+          }
+        });
+      // <!--Popups start here -->
+      // TODO: fix
+      // var sfmfoodpop = new mapboxgl.Popup({ offset: [0, -15] })
+      // sfmfoodpop.setLngLat([-122.393806, 37.754505])
+      // sfmfoodpop.setHTML("<b>SF Marin Food Bank</b><br /> We envision a community where everyone is able to obtain enough nutritious food — in a dignified manner — to support the health and well-being of themselves and their families. <br /> <a href='https://www.sfmfoodbank.org/'>Website</a>")
+      // sfmfoodpop.addTo(map);
+      
+      d3.json(
+        'https://raw.githubusercontent.com/DashewM/homelessness-project/6bb5b9b1006fda3d7b520864d1628a73fa481dcc/311%201%20year%20geojson.geojson')
+        .then(add_month_property).then(draw_homeless_data);
+      
+    });
+        
+  map.on('click', 'clusters', function(e) {
+    var features = map.queryRenderedFeatures(e.point, {
+      layers: ['clusters']
+    });
+
+    var clusterId = features[0].properties.cluster_id;
+    map.getSource('homeless').getClusterExpansionZoom(
+      clusterId,
+      function(err, zoom) {
+        if (err) return;
+        map.easeTo({
+          center: features[0].geometry.coordinates,
+          zoom: zoom
+        });
+      }
+    );
+  });
+  
+  map.on('mouseenter', 'clusters', function() {
+    map.getCanvas().style.cursor = 'pointer';
+  });
+  
+  map.on('mouseleave', 'clusters', function() {
+    map.getCanvas().style.cursor = '';
+  });
+        
+  </script>
+
+</body>
+
+</html>

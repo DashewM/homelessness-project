@@ -28,20 +28,26 @@
         color: #2dc4b2;
         }
       #console {
-        position: absolute;
+        position: relative;
         width: 240px;
         margin: 10px;
-        padding: 10px 20px;
+        top: -500px;
+        left: 1050px;
+        padding-top: 1px;
+        padding-right: 5px;
+        padding-bottom: 1px;
+        padding-left: 5px;
         background-color: white;
 }
 
     #mapId {
         width: 100%;
-        height: 700px;
+        height: 400px;
     }
 
     .map-overlay {
         font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+        color: #659dbd;
         position: bottom;
         width: 25%;
         top: 0;
@@ -143,7 +149,7 @@
     mapboxgl.accessToken = "pk.eyJ1IjoiZGFzaGV3IiwiYSI6ImNrNWZ1bjI3djAxNzIzbG9jMXcwNmdiMGoifQ.1VrgWnYzP6H9Ep5EyVMsmA";
     var map = new mapboxgl.Map({
       center: [-122.4312, 37.7739],
-      zoom: 11.5,
+      zoom: 10.7,
       style: "mapbox://styles/dashew/ck6wl2x5900re1iny9at72r62",
       container: "mapId"
     });
@@ -159,6 +165,11 @@
             .setHTML('<h3>' + feature.properties.Name + '</h3><p>'+ feature.properties.Description + '</p><p>' + feature.properties.Phone + '</p><a href=feature.properties.Website>' + feature.properties.Website + '</a>' )
             .addTo(map);
     });
+
+    var instructions = new mapboxgl.Popup()
+      .setLngLat([-122.608445, 37.808523])
+      .setHTML('<h3>Instructions</h3><p>This map shows 311 reports of homeless encampments over a 1 year period in San Francisco. Use the timescale to change the month of the data represented, and double-click the clusters or zoom to expand the data points. The icons, representing homeless services can be clicked for more information about each service.</p>')
+      .addTo(map);
 
 
     var months = [

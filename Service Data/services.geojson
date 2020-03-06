@@ -1,0 +1,383 @@
+{
+   "type": "FeatureCollection",
+   "features": [
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.410187,37.783404 ]
+    },
+    "properties": {
+    "Name":"Aranda Residence",
+    "Service-type":"Shelter",
+    "Website":"No website",
+    "Description":"Transitional/stabilization housing program with on-site case management services helping formerly chronic homeless persons.",
+    "Phone":"(415) 441-1185"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.407885,37.7789 ]
+    },
+    "properties": {
+    "Name":"Ark of Refuge Inc",
+    "Service-type":"Shelter",
+    "Website":"No website",
+    "Description":"Housing and direct services for low income and homeless HIV postive women",
+    "Phone":"No phone"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.407772,37.780057 ]
+    },
+    "properties": {
+    "Name":"CityTeam San Francisco",
+    "Service-type":"Shelter",
+    "Website":"https://www.cityteam.org/san-francisco/",
+    "Description":"CityTeam San Francisco is passionate about helping individuals and families in the community. They offer transitional housing for men and youth, a learning and career center, a dining hall, food bank, and more.",
+    "Phone":"(415) 861-8688"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.419986,37.773996 ]
+    },
+    "properties": {
+    "Name":"Civic Center Navigation Center",
+    "Service-type":"Shelter",
+    "Website":"http://hsh.sfgov.org/services/emergencyshelter/navigation-centers/",
+    "Description":"A 24/7 city operated shelter accepting persons referred by the homeless outreach team.",
+    "Phone":"No phone"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.419097,37.787133 ]
+    },
+    "properties": {
+    "Name":"Community Youth Center",
+    "Service-type":"Youth",
+    "Website":"https://www.cycsf.org/",
+    "Description":"CYC serves over 8,000 youth each year with services including employment training, substance abuse prevention education, crisis intervention, and more",
+    "Phone":"(415) 775-2636"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.415908,37.778583 ]
+    },
+    "properties": {
+    "Name":"Compass Family Services",
+    "Service-type":"Shelter",
+    "Website":"https://www.compass-sf.org/",
+    "Description":"CFS provides a variety of resources, including shelter, to families experiencing homelessness in San Francisco.",
+    "Phone":"(415) 644-0504"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.421487,37.757827 ]
+    },
+    "properties": {
+    "Name":"Dolores Street Community Services",
+    "Service-type":"Shelter",
+    "Website":"https://www.dscs.org/",
+    "Description":"Dolores Street Community Services nurtures individual wellness and cultivates collective power among low-income and immigrant communities to create a more just society. Services include housing, immigrants rights, worker's rights, and community engagement.",
+    "Phone":"(415) 282-6209"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.43558,37.79128 ]
+    },
+    "properties": {
+    "Name":"Food Runners",
+    "Service-type":"Food",
+    "Website":"http://www.foodrunners.org/",
+    "Description":"Food Runners works to alleviate hunger in San Francisco, to help prevent waste and to help create community. Food Runners provides free food from donations to San Franciscans each week.",
+    "Phone":"(415) 929-1866"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.415001,37.781982 ]
+    },
+    "properties": {
+    "Name":"Hamilton Familities Shelter Program",
+    "Service-type":"Shelter",
+    "Website":"https://www.hamiltonfamilies.org/",
+    "Description":"Hamilton Families works to prevent homelessness of families in San Francisco with a shelter and stability program.",
+    "Phone":"(415) 292-9930"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.45421,37.7816 ]
+    },
+    "properties": {
+    "Name":"Huckleberry Youth Programs",
+    "Service-type":"Youth",
+    "Website":"https://www.huckleberryyouth.org/",
+    "Description":"Huckleberry strengthens families and empowers young people with services that promote physical and emotional health, social justice in communities facing inequality, and educational success.",
+    "Phone":"(415) 668-2622"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.419838,37.78392 ]
+    },
+    "properties": {
+    "Name":"Lark - Inn for Youth",
+    "Service-type":"Youth",
+    "Website":"https://larkinstreetyouth.org/wp-content/uploads/2012.LI_.TA-sheet.pdf",
+    "Description":"Full service facility operated by Larkin Street Youth Services for homeless youth aged 18-24. Programs include meals, shelter, case management, health care, and job training. ",
+    "Phone":"(800) 669-6196"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.41301,37.78219 ]
+    },
+    "properties": {
+    "Name":"Larkin Street Youth Services",
+    "Service-type":"Youth",
+    "Website":"https://larkinstreetyouth.org/",
+    "Description":"Larkin Street Youth Services has given more than 75,000 young people a safe place to rebuild their lives. They provide housing, education and employment training, and health and wellness support.",
+    "Phone":"(415) 673-0911"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.417808,37.748838 ]
+    },
+    "properties": {
+    "Name":"Leah's Pantry",
+    "Service-type":"Food",
+    "Website":"https://www.leahspantry.org/",
+    "Description":"Leah's Pantry works to improve the health, wellness, and resilience of communities through trauma-informed nutrition security.",
+    "Phone":"(650) 351-7780"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.418307,37.764056 ]
+    },
+    "properties": {
+    "Name":"Mission Neighborhood Resource Center",
+    "Service-type":"Shelter",
+    "Website":"http://www.mnhc.org/community_programs/mission-neighborhood-resource-center/",
+    "Description":"MNRC advocates for housing and resources to enhance the physical, social, emotional and economic health of homeless residents in the 16th street corridor and surrounding Mission neighborhood.",
+    "Phone":"(415) 869-7977"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.41959,37.78543 ]
+    },
+    "properties": {
+    "Name":"Next Door Shelter",
+    "Service-type":"Shelter",
+    "Website":"https://ecs-sf.org/shelters/",
+    "Description":"Next Door Shelter provides safe, 24-hour access to shelter for unhoused adults in San Francisco. Next Door Shelter has 334 beds with separate sections for men and women. Residents receive two meals daily.",
+    "Phone":"(415) 487-3300"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.423141,37.783951 ]
+    },
+    "properties": {
+    "Name":"Project Homeless Connect",
+    "Service-type":"Shelter",
+    "Website":"https://www.projecthomelessconnect.org/",
+    "Description":"PHC envisions a day when all San Franciscans are cared for and housed. Their core purposes are to provide connections and care that lead toward an end of homelessness for our neighbors and to build a more compassionate San Francisco.",
+    "Phone":"(855) 588-7968"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.41937,37.7837 ]
+    },
+    "properties": {
+    "Name":"Project Open Hand",
+    "Service-type":"Food",
+    "Website":"https://www.openhand.org/",
+    "Description":"POH provides nutritious meals with love to sick and vulnerable\nneighbors in San Francisco and Oakland",
+    "Phone":"(415) 447-2300"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.417664,37.7878 ]
+    },
+    "properties": {
+    "Name":"Raphael House",
+    "Service-type":"Shelter",
+    "Website":"https://www.raphaelhouse.org/",
+    "Description":" Raphael House helps low-income families and families experiencing homelessness strengthen family bonds by achieving stable housing and financial independence.",
+    "Phone":"(415) 345-7200"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.41155,37.7834 ]
+    },
+    "properties": {
+    "Name":"San Francisco City Impact Rescue Mission",
+    "Service-type":"Food",
+    "Website":"https://www.sfcityimpact.com/rescue-mission",
+    "Description":"The Rescue Mission is a space where anyone can walk in, sit-down, be encouraged, receive a hot meal and have people available to listen, and connect them to greater resources.",
+    "Phone":"(415) 441-1628"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.393806,37.754505 ]
+    },
+    "properties": {
+    "Name":"San Francisco-Marin Food Bank",
+    "Service-type":"Food",
+    "Website":"https://www.sfmfoodbank.org/",
+    "Description":"SF Marin Food Bannk seeks to end hunger in San Francisco and Marin by providing meals to 32,000 families a week.",
+    "Phone":"(415) 282-1900"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.416789,37.763487 ]
+    },
+    "properties": {
+    "Name":"Seven Tepees Youth Program",
+    "Service-type":"Youth",
+    "Website":"https://www.seventepees.org/",
+    "Description":"Seven Tepees is a nonprofit, community-based organization that provides comprehensive services to underresourced youth in San Francisco.",
+    "Phone":"(415) 522-1550"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.399983,37.777819 ]
+    },
+    "properties": {
+    "Name":"St. Vincent de Paul MSC Shelter",
+    "Service-type":"Shelter",
+    "Website":"https://svdp-sf.org/what-we-do/msc-shelter/",
+    "Description":"MSC South is San Francisco's largest and most extensive homeless shelter. They provide care, guidance, and personal support to every person.",
+    "Phone":"(415) 597-7960"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.504201,37.760687 ]
+    },
+    "properties": {
+    "Name":"Sunset Youth Services",
+    "Service-type":"Youth",
+    "Website":"https://www.sunsetyouthservices.org/about-us",
+    "Description":"SYS fosters long-term stability and growth in in-risk youth, young adults, and families through caring relationships and supportive services",
+    "Phone":"(415) 665-0255"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.48981,37.7752 ]
+    },
+    "properties": {
+    "Name":"The Richmond Neighborhood Center",
+    "Service-type":"Food",
+    "Website":"https://richmondsf.org/community/food-programs/pantry/",
+    "Description":"The Neighborhood Center provides over 700 residents with free produce and groceries each week through volunteer-run food pantries at The Richmond Neighborhood Center and Lafayette Elementary School.",
+    "Phone":"(415) 751-6600"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.411216,37.776286 ]
+    },
+    "properties": {
+    "Name":"The Sanctuary",
+    "Service-type":"Shelter",
+    "Website":"https://ecs-sf.org/shelters/",
+    "Description":"The Sanctuary provides emergency shelter to homeless adults who register through the City of San Francisco. It is a 24-hour facility and provides two meals a day to shelter residents.",
+    "Phone":"(415) 487-3300"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.388633,37.72681 ]
+    },
+    "properties": {
+    "Name":"United Council of Human Services",
+    "Service-type":"Shelter",
+    "Website":"No website",
+    "Description":"UCHS offers shower facilities, laundry services, and 2 respite rooms, as well as meals and classes.",
+    "Phone":"(415) 671-1100"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.432503,37.782794 ]
+    },
+    "properties": {
+    "Name":"Urban Services YMCA",
+    "Service-type":"Youth",
+    "Website":"https://www.ymcasf.org/locations/urban-services-ymca",
+    "Description":"Urban Services reinforces families, supports the success of communities, and champions educational excellence because we believe that everyone deserves the opportunity to succeed.",
+    "Phone":"(415) 561-0631"
+    }
+  }
+]
+}

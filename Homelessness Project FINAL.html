@@ -2,6 +2,17 @@
 <head>
   <title>Homelesssness in San Francisco</title>
   <style>
+    body{
+      height: 100vh;
+      margin: 0 absolute;
+      display:flex; 
+      box-sizing: border-box;
+      flex-direction: column;
+    }
+  header{
+    flex-basis: 1%;
+    box-sizing: border-box;
+}
     h1 {
         font-family: Helvetica;
         color: #659dbd;
@@ -27,29 +38,29 @@
         text-decoration: none;
         color: #2dc4b2;
         }
+
+      #mapId {
+        width: 100%;
+        height: 70vh;
+    }
       #console {
-        position: relative;
-        width: 240px;
-        margin: 10px;
-        top: -500px;
-        left: 1050px;
+        position: absolute;
+        top: 1px;
+        left: 1px;
+        width: 300px;
+        margin: 30px;
         padding-top: 1px;
         padding-right: 5px;
         padding-bottom: 1px;
         padding-left: 5px;
         background-color: white;
+        z-index: 999;
 }
-
-    #mapId {
-        width: 100%;
-        height: 500px;
-    }
 
     .map-overlay {
         font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
         color: #659dbd;
         position: bottom;
-        width: 25%;
         top: 0;
         left: 0;
         padding: 10px;
@@ -93,11 +104,11 @@
 }
 
 .label {
-  display: inline;
+  display: inline-block;
   text-align: center;
   font-family: Helvetica;
   color: rgb(151, 148, 148);
-  padding-right: 32px;
+  width: 32.5%;
 }
 .mapboxgl-popup-content h3 {
     font-family: Helvetica;
@@ -119,35 +130,41 @@
 </head>
 
 <body>
-  <h1>Homelessness in San Francisco</h1>
-  <p>
+  <header><h1>Homelessness in San Francisco</h1><p>
     This map seeks to provide resources related to homelessness in San Francisco, including heatmaps, proximity to shelters, and more. </p>
-  </p>
+  </p></header>
 
-  <div id="mapId"></div>
-
-  <div class="map-overlay top">
-    <div class="map-overlay-inner">
-      <h2>Number of Homeless Encampents in 2019</h2>
-      <label id="month"></label>
-      <input id="slider" type="range" min="0" max="11" step="1" value="0" />
-    </div>
-  </div>
-
-  <div id='console'>
-    <h4>Homeless Encampments</h4>
-    <p>Data: <a href='https://data.sfgov.org/City-Infrastructure/311-Cases/vw6y-z8j6'>311 Encampment Calls</a> in SF, Jan 2019-Dec 2019</p>
-    <div class='session'>
-      <h4>Number of Reports</h4>
-      <div class='row colors'>
+  <div id="container">
+    <div id="mapId">
+    <div id="console">
+      <h4>Homeless Encampments</h4>
+      <p>Data: <a href='https://data.sfgov.org/City-Infrastructure/311-Cases/vw6y-z8j6'>311 Encampment Calls</a> in SF, Jan 2019-Dec 2019</p>
+      <div class='session'>
+        <h4>Number of Reports</h4>
+        <div class='row colors'>
+        </div>
       </div>
       <div class='row labels'>
         <div class='label'>0-100</div>
         <div class='label'>100-750</div>
-        <div class='label'>750+</div>
+          <div class='label'>750+</div>
       </div>
+              <div class="map-overlay top">
+                <div class="map-overlay-inner">
+                  <h2>Number of Homeless Encampents in 2019</h2>
+                    <label id="month"></label>
+                      <input id="slider" type="range" min="0" max="11" step="1" value="0" />
+                  </div>
+                </div>
+              
+
     </div>
-  </div>
+            </div>
+          </div>
+
+
+
+
 
   <h3>Homelessness is on the rise in San Francisco.</h3>
   <p>In 2019, 8,011 homeless individuals were counted in San Francisco.</p>
@@ -158,8 +175,8 @@
   <script>
     mapboxgl.accessToken = "pk.eyJ1IjoiZGFzaGV3IiwiYSI6ImNrNWZ1bjI3djAxNzIzbG9jMXcwNmdiMGoifQ.1VrgWnYzP6H9Ep5EyVMsmA";
     var map = new mapboxgl.Map({
-      center: [-122.4312, 37.7739],
-      zoom: 11,
+      center: [-122.4312, 37.7630],
+      zoom: 11.7,
       style: "mapbox://styles/dashew/ck6wl2x5900re1iny9at72r62",
       container: "mapId"
     });
@@ -177,7 +194,7 @@
     });
 
     var instructions = new mapboxgl.Popup()
-      .setLngLat([-122.608445, 37.808523])
+      .setLngLat([-122.559500, 37.711966])
       .setHTML('<h3>Instructions</h3><p>This map shows 311 reports of homeless encampments over a 1 year period in San Francisco. Use the timescale to change the month of the data represented, and double-click the clusters or zoom to expand the data points. The icons, representing homeless services can be clicked for more information about each service.</p>')
       .addTo(map);
 

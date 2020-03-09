@@ -3,6 +3,7 @@
   <title>Homelesssness in San Francisco</title>
   <style>
     body{
+      background-color: #d2d5d5ff;
       height: 100vh;
       margin: 0 absolute;
       display:flex; 
@@ -20,7 +21,7 @@
         }
     p {
         font-family: Helvetica;
-        color: rgb(151, 148, 148);
+        color: rgb(114, 114, 114);
         text-align: center
         }
     h3 {
@@ -28,11 +29,21 @@
         color: #659dbd;
         text-align: center
         }
-        h4 {
+    h4 {
         font-family: Helvetica;
         color: #659dbd;
         text-align: center
         }
+      #sectionh {
+        font-family: Helvetica;
+        color: #659dbd;
+        text-align: left
+      }
+      #sectionp {
+        font-family: Helvetica;
+        color: rgb(114, 114, 114);
+        text-align: left
+      }
     
     a {
         text-decoration: none;
@@ -107,7 +118,7 @@
   display: inline-block;
   text-align: center;
   font-family: Helvetica;
-  color: rgb(151, 148, 148);
+  color: rgb(114, 114, 114);
   width: 32.5%;
 }
 .mapboxgl-popup-content h3 {
@@ -117,7 +128,7 @@
 }
 .mapboxgl-popup-content p {
     font-family: Helvetica;
-    color: rgb(151, 148, 148);
+    color: rgb(114, 114, 114);
     text-align: left
 }
   </style>
@@ -131,7 +142,7 @@
 
 <body>
   <header><h1>Homelessness in San Francisco</h1><p>
-    This map seeks to provide resources related to homelessness in San Francisco, including heatmaps, proximity to shelters, and more. </p>
+    This map seeks to provide resources related to learning abouut and assisting the homeless population in San Francisco. </p>
   </p></header>
 
   <div id="container">
@@ -169,6 +180,13 @@
   <h3>Homelessness is on the rise in San Francisco.</h3>
   <p>In 2019, 8,011 homeless individuals were counted in San Francisco.</p>
   <p>This is a 14% increase from 2017.</p>
+  <h3 id='sectionh'> Causes of Homelessness </h3>
+  <p id='sectionp'>According to the San Francisco Homeless Count and Survey (2019), job loss is the number one cause of homelessness, with 26% or survyed individuals reporting this as their reason for being homeless. Alcohol or drug use was second, with 18%, and evication was third with 13%. Thus, some of the primary causes of homelessness are out of the control of individuals. <a href='http://hsh.sfgov.org/wp-content/uploads/2019HIRDReport_SanFrancisco_FinalDraft.pdf'>Source</a> </p>
+  <h3 id='sectionh'>Effects of Homelessness</h3>
+  <p id='sectionp'>Being homeless has an associated stigma that often prevents individuals from seeking or acceesing the help they need in the first place. Homeless individuals are more susceptible to a number of physical issues, including icreased risk of sickness, disease, and violence. They are also more at risk for mental health issues as well.</p>
+  <h3 id='sectionh'>What you can do</h3>
+  <p id='sectionp'>It is important to remember that unhoused indivudials are people down on their luck who are simply in need of assistance. Volunteering at or donating to organizations found on <a href='https://projects.sfchronicle.com/sf-homeless/how-to-help/'>this list</a> is the most effective way way to help. Being civically engaged and advocating for policies in the city which acitvely support the homeless population by supporting, for example, the building of more low-income housing is another vital way to lend support to the homeless community.</p>
+  <p id='sectionp'>Want to learn more about the creation of this webmap? Click <a href='https://dashewm.github.io/homelessness-project/Webmapping%20Final%20Write-Up.pdf'>here!</a></p>
 
   <!--https://sfgov.org/scorecards/safety-net/homeless-population -->
   <script src="https://d3js.org/d3.v5.min.js"></script>
